@@ -56,6 +56,8 @@ RUN npm install
 
 COPY index.js  server.js
 
+EXPOSE 3000 8000 4000
+
 CMD ["npm","start"]
 
 
