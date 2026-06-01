@@ -1,0 +1,21 @@
+# key - value pairs
+"apple" : "I am a red fruit"
+1: "this is shubham's roll number"
+
+---
+# lists
+- apple
+- mango
+- banana
+
+# it is case sensitive
+  
+  # it follow indentation like python
+---
+citites:
+ - new delhi
+ - mumbai
+ - gujrat
+
+# end with ...
+...   

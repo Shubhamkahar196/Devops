@@ -1,0 +1,41 @@
+# string variables
+myself: shubham
+fruit: "apple"
+job: 'swe'
+
+bio: |
+ hey my name is shubham.
+ i am a very nice dube.
+
+#  writing a single line in multile lines
+message: > 
+ this will 
+ all be 
+ one single lines
+
+#  same as 
+message: !!str his will all be one single line
+
+
+number: 5637
+marks: 98.76
+booleanValue:!!bool  No  #n,N,false,False,FALSE
+# same for true-> yes,y, Y
+
+# specify the type
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+binaryNum: !!int 0b111001
+octalNum: !!int 06574
+commaValue: !!int +540_000 #540,000
+
+
+# floating point numbers
+marks: !!float 56.89
+infinte: !!float .inf
+not an num: .nan
+ 
+
+ #null 
+ surname: !!null Null #or null Null
