@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpasswird
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - user_project
+
+  user_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: user_app
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:mysecretpasswird@postgres:5432/postgres
+    depends_on:
+      - postgres
+    networks:
+      - user_project
+
+networks:
+  user_project:
+    driver: bridge
